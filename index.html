@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ZanHybrid - ICT Solutions, Cloud Services, Consultancy and Cyber Security. Anyone. Anywhere. Anytime." />
+  <title>ZanHybrid | Anyone. Anywhere. Anytime.</title>
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* HOME-SPECIFIC */
+    .ticker-bar {
+      background: rgba(255,215,0,0.06);
+      border-bottom: 1px solid rgba(255,215,0,0.1);
+      padding: 10px 0; overflow: hidden;
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1001;
+    }
+    .ticker-track {
+      display: flex; gap: 60px;
+      animation: ticker 30s linear infinite;
+      white-space: nowrap;
+    }
+    .ticker-item {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 0.75rem; letter-spacing: 0.12em;
+      color: var(--gold-primary); text-transform: uppercase;
+      font-family: 'Orbitron', sans-serif;
+    }
+    .ticker-dot { color: var(--gold-dark); }
+    @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    nav { top: 36px; }
+    .hero { padding-top: 116px; }
+
+    .trusted-section { padding: 60px 5%; }
+    .trusted-label {
+      text-align: center;
+      font-size: 0.75rem; letter-spacing: 0.25em;
+      color: var(--white-muted); text-transform: uppercase;
+      margin-bottom: 40px;
+    }
+    .trusted-logos {
+      display: flex; justify-content: center; align-items: center;
+      gap: 60px; flex-wrap: wrap;
+    }
+    .trusted-logo {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.9rem; font-weight: 700;
+      color: rgba(255,255,255,0.2);
+      letter-spacing: 0.15em; text-transform: uppercase;
+      transition: var(--transition);
+      cursor: default;
+    }
+    .trusted-logo:hover { color: rgba(255,215,0,0.5); }
+
+    .process-section { background: var(--black-panel); }
+    .process-steps {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 0; max-width: 1200px; margin: 0 auto;
+      position: relative;
+    }
+    .process-steps::before {
+      content: '';
+      position: absolute; top: 36px; left: 12.5%; right: 12.5%; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold-dark), var(--gold-primary), var(--gold-dark), transparent);
+    }
+    .process-step { text-align: center; padding: 0 20px; }
+    .step-num {
+      width: 72px; height: 72px; border-radius: 50%;
+      background: var(--gold-gradient);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 24px;
+      font-family: 'Orbitron', sans-serif; font-size: 1.4rem; font-weight: 900;
+      color: var(--black-deep);
+      box-shadow: 0 0 30px rgba(255,215,0,0.4);
+      position: relative; z-index: 1;
+    }
+    .step-title { font-family: 'Cinzel', serif; font-size: 1rem; font-weight: 700; color: var(--gold-primary); margin-bottom: 10px; }
+    .step-text { font-size: 0.85rem; color: var(--white-muted); line-height: 1.6; }
+
+    .tech-stack { padding: 60px 5%; }
+    .tech-grid {
+      display: flex; flex-wrap: wrap; gap: 12px;
+      justify-content: center; max-width: 900px; margin: 0 auto;
+    }
+    .tech-tag {
+      background: rgba(255,215,0,0.06);
+      border: 1px solid rgba(255,215,0,0.15);
+      padding: 8px 20px; border-radius: 30px;
+      font-size: 0.8rem; color: var(--white-muted);
+      transition: var(--transition); cursor: default;
+    }
+    .tech-tag:hover { border-color: var(--gold-primary); color: var(--gold-primary); background: rgba(255,215,0,0.1); }
+
+    @media (max-width: 768px) {
+      .process-steps { grid-template-columns: repeat(2, 1fr); }
+      .process-steps::before { display: none; }
+      .ticker-bar { display: none; }
+      nav { top: 0; }
+      .hero { padding-top: 80px; }
+    }
+    @media (max-width: 480px) {
+      .process-steps { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- PRELOADER -->
+<div id="preloader">
+  <div class="preloader-inner">
+    <img src="images/logo.png" alt="ZanHybrid" class="preloader-logo" />
+    <div class="preloader-text">Initializing Systems...</div>
+  </div>
+</div>
+
+<!-- TICKER BAR -->
+<div class="ticker-bar">
+  <div class="ticker-track">
+    <span class="ticker-item">🌐 ICT Solutions <span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">☁️ Cloud Services <span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">💼 Expert Consultancy <span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">🔒 Cyber Security <span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">⚡ Anyone. Anywhere. Anytime. <span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">🌐 ICT Solutions <span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">☁️ Cloud Services <span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">💼 Expert Consultancy <span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">🔒 Cyber Security <span class="ticker-dot">✦</span></span>
+    <span class="ticker-item">⚡ Anyone. Anywhere. Anytime. <span class="ticker-dot">✦</span></span>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="images/logo.png" alt="ZanHybrid Logo" />
+    <div class="nav-logo-text">
+      <span class="nav-logo-name">ZanHybrid</span>
+      <span class="nav-logo-tag">Anyone · Anywhere · Anytime</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="pages/about.html">About</a></li>
+    <li><a href="pages/services.html">Services</a></li>
+    <li><a href="pages/portfolio.html">Portfolio</a></li>
+    <li><a href="pages/contact.html" class="nav-cta">Contact Us</a></li>
+  </ul>
+  <div class="hamburger" role="button" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="pages/about.html">About</a>
+  <a href="pages/services.html">Services</a>
+  <a href="pages/portfolio.html">Portfolio</a>
+  <a href="pages/contact.html">Contact Us →</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-particles"></div>
+
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-badge"><span class="dot"></span> Trusted Technology Partner</div>
+      <h1 class="hero-title">
+        Empowering Your<br />
+        <span class="gold-text">Digital Future</span><br />
+        <span class="outline-text">With Precision</span>
+      </h1>
+      <p class="hero-description">
+        ZanHybrid delivers cutting-edge <strong style="color:var(--gold-primary)"><span class="typed-text">ICT Solutions</span></strong> 
+        for businesses of every scale — from secure infrastructure to intelligent cloud deployments. 
+        We are your end-to-end technology partner.
+      </p>
+      <div class="hero-buttons">
+        <a href="pages/services.html" class="btn-primary">Explore Services →</a>
+        <a href="pages/contact.html" class="btn-secondary">Get Free Quote</a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-logo-container">
+        <div class="hero-logo-ring ring-1"></div>
+        <div class="hero-logo-ring ring-2"></div>
+        <div class="hero-logo-ring ring-3"></div>
+        <img src="images/logo.png" alt="ZanHybrid" class="hero-logo-img" />
+        <div class="hero-stats left">
+          <div class="stat-card">
+            <div class="stat-number"><span class="counter" data-target="500">0</span>+</div>
+            <div class="stat-label">Clients Served</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number"><span class="counter" data-target="10">0</span>+</div>
+            <div class="stat-label">Years Active</div>
+          </div>
+        </div>
+        <div class="hero-stats right">
+          <div class="stat-card">
+            <div class="stat-number">99<span style="font-size:1.2rem">%</span></div>
+            <div class="stat-label">Uptime SLA</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number"><span class="counter" data-target="24">0</span>/7</div>
+            <div class="stat-label">Support</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- TRUSTED BY -->
+<div class="trusted-section">
+  <div class="trusted-label">Trusted by industry leaders across sectors</div>
+  <div class="trusted-logos">
+    <div class="trusted-logo">FinanceCorpTZ</div>
+    <div class="trusted-logo">GovTech Africa</div>
+    <div class="trusted-logo">MediCare Systems</div>
+    <div class="trusted-logo">EduConnect</div>
+    <div class="trusted-logo">RetailPro Ltd</div>
+    <div class="trusted-logo">LogiTrack</div>
+  </div>
+</div>
+
+<!-- SERVICES PREVIEW -->
+<section id="services">
+  <div class="section-header reveal">
+    <div class="section-tag">What We Do</div>
+    <h2 class="section-title">Our Core <span class="gold">Services</span></h2>
+    <div class="section-divider"></div>
+    <p class="section-subtitle">Comprehensive technology solutions tailored to drive your business forward in the digital age.</p>
+  </div>
+
+  <div class="services-grid">
+    <div class="service-card ict reveal">
+      <div class="service-icon">🌐</div>
+      <div class="service-title">ICT Solutions</div>
+      <p class="service-description">End-to-end information and communication technology infrastructure design, deployment, and management.</p>
+      <ul class="service-features">
+        <li><span class="check">✔</span> Network Infrastructure Design</li>
+        <li><span class="check">✔</span> IT Hardware & Software Supply</li>
+        <li><span class="check">✔</span> Systems Integration</li>
+        <li><span class="check">✔</span> Managed IT Services</li>
+      </ul>
+      <a href="pages/services.html#ict" class="service-link">Learn More →</a>
+    </div>
+
+    <div class="service-card cloud reveal">
+      <div class="service-icon">☁️</div>
+      <div class="service-title">Cloud Services</div>
+      <p class="service-description">Flexible, scalable cloud solutions that modernize your operations, reduce costs, and accelerate growth.</p>
+      <ul class="service-features">
+        <li><span class="check">✔</span> Cloud Migration & Architecture</li>
+        <li><span class="check">✔</span> SaaS / PaaS / IaaS Solutions</li>
+        <li><span class="check">✔</span> Hybrid Cloud Deployment</li>
+        <li><span class="check">✔</span> Cloud Cost Optimization</li>
+      </ul>
+      <a href="pages/services.html#cloud" class="service-link">Learn More →</a>
+    </div>
+
+    <div class="service-card consultant reveal">
+      <div class="service-icon">💼</div>
+      <div class="service-title">Consultancy</div>
+      <p class="service-description">Strategic technology consulting to help organizations navigate digital transformation with confidence.</p>
+      <ul class="service-features">
+        <li><span class="check">✔</span> Digital Transformation Strategy</li>
+        <li><span class="check">✔</span> IT Governance & Compliance</li>
+        <li><span class="check">✔</span> Technology Roadmapping</li>
+        <li><span class="check">✔</span> Business Process Optimization</li>
+      </ul>
+      <a href="pages/services.html#consultant" class="service-link">Learn More →</a>
+    </div>
+
+    <div class="service-card security reveal">
+      <div class="service-icon">🔒</div>
+      <div class="service-title">Cyber Security</div>
+      <p class="service-description">Robust security frameworks protecting your digital assets from evolving cyber threats and vulnerabilities.</p>
+      <ul class="service-features">
+        <li><span class="check">✔</span> Security Audits & Penetration Testing</li>
+        <li><span class="check">✔</span> Threat Monitoring & Response</li>
+        <li><span class="check">✔</span> Data Protection & Encryption</li>
+        <li><span class="check">✔</span> Security Awareness Training</li>
+      </ul>
+      <a href="pages/services.html#security" class="service-link">Learn More →</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-section">
+  <div class="stats-grid">
+    <div class="stat-item reveal">
+      <div class="stat-num"><span class="counter" data-target="500">0</span><span class="stat-plus">+</span></div>
+      <div class="stat-desc">Projects Delivered</div>
+    </div>
+    <div class="stat-item reveal">
+      <div class="stat-num"><span class="counter" data-target="98">0</span><span class="stat-plus">%</span></div>
+      <div class="stat-desc">Client Satisfaction</div>
+    </div>
+    <div class="stat-item reveal">
+      <div class="stat-num"><span class="counter" data-target="10">0</span><span class="stat-plus">+</span></div>
+      <div class="stat-desc">Years Experience</div>
+    </div>
+    <div class="stat-item reveal">
+      <div class="stat-num"><span class="counter" data-target="50">0</span><span class="stat-plus">+</span></div>
+      <div class="stat-desc">Expert Team</div>
+    </div>
+  </div>
+</div>
+
+<!-- HOW WE WORK -->
+<section class="process-section">
+  <div class="section-header reveal">
+    <div class="section-tag">Our Process</div>
+    <h2 class="section-title">How We <span class="gold">Work</span></h2>
+    <div class="section-divider"></div>
+  </div>
+  <div class="process-steps">
+    <div class="process-step reveal">
+      <div class="step-num">01</div>
+      <div class="step-title">Discovery</div>
+      <p class="step-text">We analyze your business needs, infrastructure, and goals through in-depth consultation.</p>
+    </div>
+    <div class="process-step reveal">
+      <div class="step-num">02</div>
+      <div class="step-title">Strategy</div>
+      <p class="step-text">Our experts craft a tailored technology roadmap aligned with your objectives and budget.</p>
+    </div>
+    <div class="process-step reveal">
+      <div class="step-num">03</div>
+      <div class="step-title">Execution</div>
+      <p class="step-text">We implement solutions with precision, minimal disruption, and rigorous quality checks.</p>
+    </div>
+    <div class="process-step reveal">
+      <div class="step-num">04</div>
+      <div class="step-title">Support</div>
+      <p class="step-text">Continuous monitoring, optimization, and 24/7 technical support to ensure peak performance.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section>
+  <div class="section-header reveal">
+    <div class="section-tag">Why ZanHybrid</div>
+    <h2 class="section-title">Built on <span class="gold">Excellence</span></h2>
+    <div class="section-divider"></div>
+  </div>
+  <div class="features-grid">
+    <div class="feature-card reveal" data-num="01">
+      <div class="feature-icon">⚡</div>
+      <div class="feature-title">Rapid Deployment</div>
+      <p class="feature-text">We deploy solutions 40% faster than industry average without compromising quality or security.</p>
+    </div>
+    <div class="feature-card reveal" data-num="02">
+      <div class="feature-icon">🛡️</div>
+      <div class="feature-title">Security First</div>
+      <p class="feature-text">Every solution we build has security baked in from the ground up, not bolted on as an afterthought.</p>
+    </div>
+    <div class="feature-card reveal" data-num="03">
+      <div class="feature-icon">🔧</div>
+      <div class="feature-title">24/7 Support</div>
+      <p class="feature-text">Our dedicated support team is always available, ensuring your systems run without interruption.</p>
+    </div>
+    <div class="feature-card reveal" data-num="04">
+      <div class="feature-icon">📈</div>
+      <div class="feature-title">Scalable Solutions</div>
+      <p class="feature-text">We design systems that grow with your business, preventing costly re-architectures down the road.</p>
+    </div>
+    <div class="feature-card reveal" data-num="05">
+      <div class="feature-icon">💡</div>
+      <div class="feature-title">Innovation Driven</div>
+      <p class="feature-text">Leveraging the latest technologies including AI, blockchain, and edge computing for competitive advantage.</p>
+    </div>
+    <div class="feature-card reveal" data-num="06">
+      <div class="feature-icon">🤝</div>
+      <div class="feature-title">Partnership Model</div>
+      <p class="feature-text">We become an extension of your team, deeply invested in your long-term success and growth.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section style="background:var(--black-panel); border-top:1px solid rgba(255,215,0,0.08);">
+  <div class="section-header reveal">
+    <div class="section-tag">Testimonials</div>
+    <h2 class="section-title">What Clients <span class="gold">Say</span></h2>
+    <div class="section-divider"></div>
+  </div>
+  <div class="testimonials-slider">
+    <div class="testimonial-card reveal">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">"ZanHybrid transformed our entire IT infrastructure within 3 months. Their team's expertise in cloud migration saved us 40% on operational costs."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">JM</div>
+        <div>
+          <div class="author-name">James Mwangi</div>
+          <div class="author-role">CTO, FinanceCorpTZ</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card reveal">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">"Their cybersecurity team identified and neutralized critical vulnerabilities we didn't even know existed. Exceptional professionalism and results."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">SA</div>
+        <div>
+          <div class="author-name">Salma Abubakar</div>
+          <div class="author-role">IT Director, MediCare Systems</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card reveal">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">"The consultancy service helped us define a clear 5-year digital roadmap. ZanHybrid understands business, not just technology."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">DK</div>
+        <div>
+          <div class="author-name">David Kimani</div>
+          <div class="author-role">CEO, EduConnect Africa</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECH STACK -->
+<div class="tech-stack">
+  <div class="trusted-label">Technologies We Work With</div>
+  <div class="tech-grid">
+    <span class="tech-tag">AWS</span><span class="tech-tag">Microsoft Azure</span>
+    <span class="tech-tag">Google Cloud</span><span class="tech-tag">Cisco</span>
+    <span class="tech-tag">Fortinet</span><span class="tech-tag">VMware</span>
+    <span class="tech-tag">Linux</span><span class="tech-tag">Windows Server</span>
+    <span class="tech-tag">Docker</span><span class="tech-tag">Kubernetes</span>
+    <span class="tech-tag">SAP</span><span class="tech-tag">Oracle</span>
+    <span class="tech-tag">Palo Alto</span><span class="tech-tag">CrowdStrike</span>
+    <span class="tech-tag">Splunk</span><span class="tech-tag">ServiceNow</span>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta-section">
+  <div class="cta-bg"></div>
+  <div class="cta-content reveal">
+    <div class="section-tag">Ready to Start?</div>
+    <h2 class="cta-title">Let's Build Your <span style="background:var(--gold-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Digital Future</span> Together</h2>
+    <p class="cta-text">Join hundreds of organizations that trust ZanHybrid to power their technology journey. Let's start with a free consultation.</p>
+    <div class="cta-buttons">
+      <a href="pages/contact.html" class="btn-primary">Schedule Consultation →</a>
+      <a href="pages/about.html" class="btn-secondary">Learn About Us</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand reveal-left">
+      <img src="images/logo.png" alt="ZanHybrid" />
+      <p>ZanHybrid is your trusted technology partner delivering innovative ICT solutions, cloud services, expert consultancy and robust cyber security — to anyone, anywhere, anytime.</p>
+      <div class="footer-socials">
+        <a href="#" class="social-btn" title="LinkedIn">in</a>
+        <a href="#" class="social-btn" title="Twitter">𝕏</a>
+        <a href="#" class="social-btn" title="Facebook">f</a>
+        <a href="#" class="social-btn" title="YouTube">▶</a>
+      </div>
+    </div>
+    <div class="footer-col reveal">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="pages/services.html#ict">ICT Solutions</a></li>
+        <li><a href="pages/services.html#cloud">Cloud Services</a></li>
+        <li><a href="pages/services.html#consultant">Consultancy</a></li>
+        <li><a href="pages/services.html#security">Cyber Security</a></li>
+      </ul>
+    </div>
+    <div class="footer-col reveal">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="pages/about.html">About Us</a></li>
+        <li><a href="pages/portfolio.html">Portfolio</a></li>
+        <li><a href="pages/contact.html">Contact</a></li>
+        <li><a href="#">Careers</a></li>
+      </ul>
+    </div>
+    <div class="footer-col reveal-right">
+      <h4>Contact</h4>
+      <div class="footer-contact-item">
+        <span class="contact-icon">📍</span>
+        <span class="contact-text">Zanzibar town, Tanzania</span>
+      </div>
+      <div class="footer-contact-item">
+        <span class="contact-icon">📞</span>
+        <span class="contact-text">+255 XXX XXX XXX</span>
+      </div>
+      <div class="footer-contact-item">
+        <span class="contact-icon">✉️</span>
+        <span class="contact-text">info@zanhybrid.com</span>
+      </div>
+      <div class="footer-contact-item">
+        <span class="contact-icon">🕐</span>
+        <span class="contact-text">Mon – Fri: 8AM – 6PM<br/>24/7 Support Available</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2024 <span>ZanHybrid</span>. All rights reserved. — Anyone. Anywhere. Anytime.</div>
+    <div class="footer-legal">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Cookie Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
