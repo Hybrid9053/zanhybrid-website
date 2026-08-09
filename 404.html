@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found | ZanHybrid</title>
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .not-found { min-height: 70vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 140px 5% 60px; }
+    .not-found h1 { font-family: 'Cinzel', serif; font-size: 4rem; color: var(--gold-primary); margin-bottom: 10px; }
+    .not-found p { color: var(--white-muted); margin-bottom: 24px; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="images/logo.png" alt="ZanHybrid Logo" />
+    <div class="nav-logo-text">
+      <span class="nav-logo-name">ZanHybrid</span>
+      <span class="nav-logo-tag">Anyone · Anywhere · Anytime</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="pages/about.html">About</a></li>
+    <li><a href="pages/services.html">Services</a></li>
+    <li><a href="pages/portfolio.html">Portfolio</a></li>
+    <li><a href="pages/contact.html" class="nav-cta">Contact Us</a></li>
+  </ul>
+  <div class="hamburger" role="button" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="not-found">
+  <h1>404</h1>
+  <p>The page you're looking for doesn't exist.</p>
+  <a href="index.html" class="btn-primary">Back to Home →</a>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
