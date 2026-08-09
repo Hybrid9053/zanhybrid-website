@@ -3,66 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Contact ZanHybrid - ICT Solutions, Cloud Services, Consultancy and Cyber Security." />
-  <title>Contact Us | ZanHybrid</title>
+  <meta name="description" content="ZanHybrid Blog - insights on ICT, cloud, consultancy and cyber security." />
+  <title>Blog | ZanHybrid</title>
   <link rel="icon" type="image/png" href="../images/logo.png" />
   <link rel="stylesheet" href="../css/style.css" />
   <style>
-    /* CONTACT-SPECIFIC */
+    /* BLOG-SPECIFIC */
     .page-header { padding-top: 140px; padding-bottom: 60px; text-align: center; }
     .page-header h1 { font-family: 'Cinzel', serif; font-size: 2.4rem; color: var(--gold-primary); }
 
-    .contact-wrap {
-      display: grid; grid-template-columns: 1fr 1.2fr; gap: 50px;
-      max-width: 1100px; margin: 0 auto 90px; padding: 0 5%;
+    .blog-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+      max-width: 1200px; margin: 0 auto 90px; padding: 0 5%;
     }
-    .contact-info-list { display: flex; flex-direction: column; gap: 22px; }
-    .contact-info-item {
-      display: flex; gap: 16px; background: var(--black-panel);
-      border: 1px solid rgba(255,215,0,0.12); border-radius: 10px; padding: 18px;
+    .blog-card {
+      background: var(--black-panel); border: 1px solid rgba(255,215,0,0.12);
+      border-radius: 12px; overflow: hidden; transition: var(--transition);
+      display: flex; flex-direction: column;
     }
-    .contact-info-item .icon { font-size: 1.4rem; }
-    .contact-info-item h4 { color: var(--gold-primary); font-size: 0.9rem; margin-bottom: 4px; }
-    .contact-info-item p { color: var(--white-muted); font-size: 0.85rem; line-height: 1.5; }
+    .blog-card:hover { border-color: var(--gold-primary); transform: translateY(-4px); }
+    .blog-thumb {
+      height: 140px; display: flex; align-items: center; justify-content: center;
+      font-size: 2.2rem; background: rgba(255,215,0,0.06);
+    }
+    .blog-body { padding: 20px; flex: 1; display: flex; flex-direction: column; }
+    .blog-date { font-size: 0.75rem; color: var(--gold-primary); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px; }
+    .blog-body h3 { font-family: 'Cinzel', serif; color: var(--white); font-size: 1.05rem; margin-bottom: 8px; }
+    .blog-body p { color: var(--white-muted); font-size: 0.85rem; line-height: 1.6; margin-bottom: 16px; flex: 1; }
+    .blog-link { color: var(--gold-primary); font-size: 0.85rem; text-decoration: none; }
 
-    .contact-form { background: var(--black-panel); border: 1px solid rgba(255,215,0,0.12); border-radius: 12px; padding: 32px; }
-    .contact-form .field { margin-bottom: 18px; }
-    .contact-form label { display: block; color: var(--white-muted); font-size: 0.8rem; margin-bottom: 6px; letter-spacing: 0.05em; text-transform: uppercase; }
-    .contact-form input, .contact-form textarea {
-      width: 100%; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,215,0,0.2);
-      border-radius: 8px; padding: 12px 14px; color: var(--white); font-family: inherit; font-size: 0.9rem;
+    .blog-note {
+      max-width: 700px; margin: 0 auto 60px; padding: 16px 24px;
+      background: rgba(255,215,0,0.06); border: 1px dashed rgba(255,215,0,0.3);
+      border-radius: 10px; color: var(--white-muted); font-size: 0.85rem; text-align: center;
     }
-    .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--gold-primary); }
-    .contact-form textarea { resize: vertical; min-height: 120px; }
-    /* honeypot field must stay hidden from real users, visible to bots that ignore CSS */
-    .hp-field { position: absolute; left: -9999px; top: -9999px; }
 
-    @media (max-width: 900px) { .contact-wrap { grid-template-columns: 1fr; } }
-
-    /* THEME TOGGLE */
-    [data-theme="light"] {
-      --black-deep: #f5f2e8;
-      --black-panel: #ffffff;
-      --white: #1a1a1a;
-      --white-muted: #55524a;
-    }
-    [data-theme="light"] body { background: var(--black-deep); color: var(--white); }
-    .theme-toggle-btn {
-      background: none; border: 1px solid rgba(255,215,0,0.3); color: var(--gold-primary);
-      border-radius: 20px; padding: 6px 14px; font-size: 0.85rem; cursor: pointer;
-      transition: var(--transition); margin-right: 14px;
-    }
-    .theme-toggle-btn:hover { background: rgba(255,215,0,0.1); }
-
-    /* WHATSAPP FLOAT */
-    .whatsapp-float {
-      position: fixed; bottom: 24px; right: 24px; z-index: 1002;
-      width: 56px; height: 56px; border-radius: 50%;
-      background: #25D366; display: flex; align-items: center; justify-content: center;
-      font-size: 1.6rem; text-decoration: none; box-shadow: 0 4px 16px rgba(0,0,0,0.35);
-      transition: var(--transition);
-    }
-    .whatsapp-float:hover { transform: scale(1.08); }
+    @media (max-width: 900px) { .blog-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px) { .blog-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -102,71 +79,57 @@
 
 <!-- PAGE HEADER -->
 <section class="page-header">
-  <div class="section-tag">Get In Touch</div>
-  <h1>Contact <span class="gold">Us</span></h1>
+  <div class="section-tag">Insights</div>
+  <h1>ZanHybrid <span class="gold">Blog</span></h1>
 </section>
 
-<div class="contact-wrap">
-  <div class="contact-info-list">
-    <div class="contact-info-item reveal-left">
-      <span class="icon">📍</span>
-      <div>
-        <h4>Location</h4>
-        <p>Zanzibar town, Tanzania</p>
-      </div>
-    </div>
-    <div class="contact-info-item reveal-left">
-      <span class="icon">📞</span>
-      <div>
-        <h4>Phone</h4>
-        <p>+255 622 789 053</p>
-      </div>
-    </div>
-    <div class="contact-info-item reveal-left">
-      <span class="icon">✉️</span>
-      <div>
-        <h4>Email</h4>
-        <p>zanhybrid9053@gmail.com</p>
-      </div>
-    </div>
-    <div class="contact-info-item reveal-left">
-      <span class="icon">🕐</span>
-      <div>
-        <h4>Working Hours</h4>
-        <p>Mon – Fri: 8AM – 6PM<br/>24/7 Support Available</p>
-      </div>
+<div class="blog-note">
+  These are starter placeholder posts - replace with your own articles once you're ready to publish regularly. A steady blog helps with search visibility and shows expertise.
+</div>
+
+<!-- BLOG GRID -->
+<div class="blog-grid">
+  <div class="blog-card reveal">
+    <div class="blog-thumb">🔒</div>
+    <div class="blog-body">
+      <div class="blog-date">Sample Post</div>
+      <h3>5 Cyber Security Basics Every Small Business Should Know</h3>
+      <p>A quick rundown of practical, low-cost steps that meaningfully reduce your risk of a breach.</p>
+      <a href="blog-cybersecurity-basics.html" class="blog-link">Read More →</a>
     </div>
   </div>
+  <div class="blog-card reveal">
+    <div class="blog-thumb">☁️</div>
+    <div class="blog-body">
+      <div class="blog-date">Sample Post</div>
+      <h3>Is Your Business Ready to Move to the Cloud?</h3>
+      <p>Signs it's time to migrate, and the questions to ask before you do.</p>
+      <a href="#" class="blog-link">Coming soon →</a>
+    </div>
+  </div>
+  <div class="blog-card reveal">
+    <div class="blog-thumb">💼</div>
+    <div class="blog-body">
+      <div class="blog-date">Sample Post</div>
+      <h3>Building a Technology Roadmap That Actually Gets Used</h3>
+      <p>Why so many IT roadmaps fail, and how to build one your team will stick to.</p>
+      <a href="#" class="blog-link">Coming soon →</a>
+    </div>
+  </div>
+</div>
 
-  <!--
-    Netlify Forms: data-netlify="true" tells Netlify to capture this form at build/deploy time.
-    The hidden "bot-field" is a honeypot - real users never fill it, bots usually do,
-    so Netlify silently drops any submission where it's not empty.
-  -->
-  <form class="contact-form reveal" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-    <input type="hidden" name="form-name" value="contact" />
-    <p class="hp-field">
-      <label>Leave this field empty <input name="bot-field" /></label>
-    </p>
-
-    <div class="field">
-      <label for="name">Full Name</label>
-      <input type="text" id="name" name="name" required maxlength="100" />
+<!-- CTA -->
+<div class="cta-section">
+  <div class="cta-bg"></div>
+  <div class="cta-content reveal">
+    <div class="section-tag">Ready to Start?</div>
+    <h2 class="cta-title">Let's Build Your <span style="background:var(--gold-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Digital Future</span> Together</h2>
+    <p class="cta-text">Have a question about something you read? Get in touch.</p>
+    <div class="cta-buttons">
+      <a href="contact.html" class="btn-primary">Schedule Consultation →</a>
+      <a href="services.html" class="btn-secondary">View Services</a>
     </div>
-    <div class="field">
-      <label for="email">Email Address</label>
-      <input type="email" id="email" name="email" required maxlength="150" />
-    </div>
-    <div class="field">
-      <label for="subject">Subject</label>
-      <input type="text" id="subject" name="subject" required maxlength="150" />
-    </div>
-    <div class="field">
-      <label for="message">Message</label>
-      <textarea id="message" name="message" required maxlength="2000"></textarea>
-    </div>
-    <button type="submit" class="btn-primary">Send Message →</button>
-  </form>
+  </div>
 </div>
 
 <!-- FOOTER -->
@@ -198,7 +161,6 @@
         <li><a href="portfolio.html">Portfolio</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a href="#">Careers</a></li>
       </ul>
     </div>
     <div class="footer-col reveal-right">

@@ -101,6 +101,31 @@
     @media (max-width: 480px) {
       .process-steps { grid-template-columns: 1fr; }
     }
+
+    /* THEME TOGGLE */
+    [data-theme="light"] {
+      --black-deep: #f5f2e8;
+      --black-panel: #ffffff;
+      --white: #1a1a1a;
+      --white-muted: #55524a;
+    }
+    [data-theme="light"] body { background: var(--black-deep); color: var(--white); }
+    .theme-toggle-btn {
+      background: none; border: 1px solid rgba(255,215,0,0.3); color: var(--gold-primary);
+      border-radius: 20px; padding: 6px 14px; font-size: 0.85rem; cursor: pointer;
+      transition: var(--transition); margin-right: 14px;
+    }
+    .theme-toggle-btn:hover { background: rgba(255,215,0,0.1); }
+
+    /* WHATSAPP FLOAT */
+    .whatsapp-float {
+      position: fixed; bottom: 24px; right: 24px; z-index: 1002;
+      width: 56px; height: 56px; border-radius: 50%;
+      background: #25D366; display: flex; align-items: center; justify-content: center;
+      font-size: 1.6rem; text-decoration: none; box-shadow: 0 4px 16px rgba(0,0,0,0.35);
+      transition: var(--transition);
+    }
+    .whatsapp-float:hover { transform: scale(1.08); }
   </style>
 </head>
 <body>
@@ -143,8 +168,10 @@
     <li><a href="pages/about.html">About</a></li>
     <li><a href="pages/services.html">Services</a></li>
     <li><a href="pages/portfolio.html">Portfolio</a></li>
+    <li><a href="pages/blog.html">Blog</a></li>
     <li><a href="pages/contact.html" class="nav-cta">Contact Us</a></li>
   </ul>
+  <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle light/dark theme">🌙 Dark</button>
   <div class="hamburger" role="button" aria-label="Menu">
     <span></span><span></span><span></span>
   </div>
@@ -156,6 +183,7 @@
   <a href="pages/about.html">About</a>
   <a href="pages/services.html">Services</a>
   <a href="pages/portfolio.html">Portfolio</a>
+  <a href="pages/blog.html">Blog</a>
   <a href="pages/contact.html">Contact Us →</a>
 </div>
 
@@ -223,6 +251,7 @@
 <!-- TRUSTED BY -->
 <div class="trusted-section">
   <div class="trusted-label">Trusted by industry leaders across sectors</div>
+  <!-- Placeholder names below - swap these for your real client/partner logos once you have a few -->
   <div class="trusted-logos">
     <div class="trusted-logo">FinanceCorpTZ</div>
     <div class="trusted-logo">GovTech Africa</div>
@@ -491,6 +520,7 @@
       <ul>
         <li><a href="pages/about.html">About Us</a></li>
         <li><a href="pages/portfolio.html">Portfolio</a></li>
+        <li><a href="pages/blog.html">Blog</a></li>
         <li><a href="pages/contact.html">Contact</a></li>
         <li><a href="#">Careers</a></li>
       </ul>
@@ -525,6 +555,30 @@
   </div>
 </footer>
 
+<a href="https://wa.me/255622789053" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">💬</a>
+
+<script>
+(function(){
+  var stored = localStorage.getItem('zanhybrid-theme');
+  if (stored === 'light') document.documentElement.setAttribute('data-theme', 'light');
+  var btn = document.getElementById('theme-toggle');
+  if (btn) {
+    btn.textContent = stored === 'light' ? '☀️ Light' : '🌙 Dark';
+    btn.addEventListener('click', function(){
+      var isLight = document.documentElement.getAttribute('data-theme') === 'light';
+      if (isLight) {
+        document.documentElement.removeAttribute('data-theme');
+        localStorage.setItem('zanhybrid-theme', 'dark');
+        btn.textContent = '🌙 Dark';
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('zanhybrid-theme', 'light');
+        btn.textContent = '☀️ Light';
+      }
+    });
+  }
+})();
+</script>
 <script src="js/main.js"></script>
 </body>
 </html>
