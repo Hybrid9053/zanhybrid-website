@@ -3,75 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="ZanHybrid Portfolio - projects in ICT, Cloud, Consultancy and Cyber Security." />
-  <title>Portfolio | ZanHybrid</title>
+  <meta name="description" content="Real and demo projects showing the kind of website, networking and IT work ZanHybrid delivers for Zanzibar businesses." />
+  <link rel="canonical" href="https://zanhybrid.co.tz/pages/portfolio.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Portfolio | ZanHybrid - Websites, Networking & IT Projects" />
+  <meta property="og:description" content="Real and demo projects showing the kind of website, networking and IT work ZanHybrid delivers for Zanzibar businesses." />
+  <meta property="og:url" content="https://zanhybrid.co.tz/pages/portfolio.html" />
+  <meta property="og:image" content="https://zanhybrid.co.tz/images/logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Portfolio | ZanHybrid - Websites, Networking & IT Projects" />
+  <meta name="twitter:description" content="Real and demo projects showing the kind of website, networking and IT work ZanHybrid delivers for Zanzibar businesses." />
+  <title>Portfolio | ZanHybrid - Websites, Networking & IT Projects</title>
   <link rel="icon" type="image/png" href="../images/logo.png" />
   <link rel="stylesheet" href="../css/style.css" />
   <style>
-    /* PORTFOLIO-SPECIFIC */
-    .page-header { padding-top: 140px; padding-bottom: 60px; text-align: center; }
-    .page-header h1 { font-family: 'Cinzel', serif; font-size: 2.4rem; color: var(--gold-primary); }
-
-    .portfolio-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
-      max-width: 1200px; margin: 0 auto 80px; padding: 0 5%;
-    }
-    .portfolio-card {
-      background: var(--black-panel); border: 1px solid rgba(255,215,0,0.12);
-      border-radius: 12px; overflow: hidden; transition: var(--transition);
-    }
+    .portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1200px; margin: 0 auto 30px; padding: 0 5%; }
+    .portfolio-card { background: var(--black-panel); border: 1px solid rgba(255,215,0,0.12); border-radius: 12px; overflow: hidden; transition: var(--transition); }
     .portfolio-card:hover { border-color: var(--gold-primary); transform: translateY(-4px); }
-    .portfolio-thumb {
-      height: 160px; display: flex; align-items: center; justify-content: center;
-      font-size: 2.5rem; background: rgba(255,215,0,0.06);
-    }
+    .portfolio-thumb { height: 150px; display: flex; align-items: center; justify-content: center; font-size: 2.4rem; background: rgba(255,215,0,0.06); position: relative; }
+    .demo-tag { position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.6); color: var(--gold-primary); font-size: 0.65rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 3px 10px; border-radius: 12px; border: 1px solid rgba(255,215,0,0.3); }
     .portfolio-body { padding: 20px; }
-    .portfolio-tag {
-      display: inline-block; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase;
-      color: var(--gold-primary); border: 1px solid rgba(255,215,0,0.3);
-      border-radius: 20px; padding: 3px 12px; margin-bottom: 12px;
-    }
-    .portfolio-body h3 { font-family: 'Cinzel', serif; color: var(--white); font-size: 1.05rem; margin-bottom: 8px; }
-    .portfolio-body p { color: var(--white-muted); font-size: 0.85rem; line-height: 1.6; }
-
-    .portfolio-note {
-      max-width: 700px; margin: 0 auto 60px; padding: 16px 24px;
-      background: rgba(255,215,0,0.06); border: 1px dashed rgba(255,215,0,0.3);
-      border-radius: 10px; color: var(--white-muted); font-size: 0.85rem; text-align: center;
-    }
-
+    .portfolio-tag { display: inline-block; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-primary); border: 1px solid rgba(255,215,0,0.3); border-radius: 20px; padding: 3px 12px; margin-bottom: 12px; }
+    .portfolio-body h3 { font-family: 'Cinzel', serif; color: var(--white); font-size: 1.02rem; margin-bottom: 8px; }
+    .portfolio-body p { color: var(--white-muted); font-size: 0.83rem; line-height: 1.6; margin-bottom: 6px; }
+    .portfolio-body p strong { color: var(--gold-primary); }
+    .portfolio-note { max-width: 750px; margin: 0 auto 50px; padding: 16px 24px; background: rgba(255,215,0,0.06); border: 1px dashed rgba(255,215,0,0.3); border-radius: 10px; color: var(--white-muted); font-size: 0.85rem; text-align: center; }
     @media (max-width: 900px) { .portfolio-grid { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 600px) { .portfolio-grid { grid-template-columns: 1fr; } }
-
-    /* THEME TOGGLE */
-    [data-theme="light"] {
-      --black-deep: #f5f2e8;
-      --black-panel: #ffffff;
-      --white: #1a1a1a;
-      --white-muted: #55524a;
-    }
-    [data-theme="light"] body { background: var(--black-deep); color: var(--white); }
-    .theme-toggle-btn {
-      background: none; border: 1px solid rgba(255,215,0,0.3); color: var(--gold-primary);
-      border-radius: 20px; padding: 6px 14px; font-size: 0.85rem; cursor: pointer;
-      transition: var(--transition); margin-right: 14px;
-    }
-    .theme-toggle-btn:hover { background: rgba(255,215,0,0.1); }
-
-    /* WHATSAPP FLOAT */
-    .whatsapp-float {
-      position: fixed; bottom: 24px; right: 24px; z-index: 1002;
-      width: 56px; height: 56px; border-radius: 50%;
-      background: #25D366; display: flex; align-items: center; justify-content: center;
-      font-size: 1.6rem; text-decoration: none; box-shadow: 0 4px 16px rgba(0,0,0,0.35);
-      transition: var(--transition);
-    }
-    .whatsapp-float:hover { transform: scale(1.08); }
   </style>
 </head>
 <body>
-
-<!-- NAV -->
 <nav>
   <a href="../index.html" class="nav-logo">
     <img src="../images/logo.png" alt="ZanHybrid Logo" />
@@ -84,7 +45,8 @@
     <li><a href="../index.html">Home</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="services.html">Services</a></li>
-    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="portfolio.html" class="active">Portfolio</a></li>
     <li><a href="blog.html">Blog</a></li>
     <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
   </ul>
@@ -94,98 +56,90 @@
   </div>
 </nav>
 
-<!-- MOBILE MENU -->
 <div class="mobile-menu">
   <a href="../index.html">Home</a>
   <a href="about.html">About</a>
   <a href="services.html">Services</a>
+  <a href="pricing.html">Pricing</a>
   <a href="portfolio.html">Portfolio</a>
   <a href="blog.html">Blog</a>
   <a href="contact.html">Contact Us →</a>
 </div>
 
-<!-- PAGE HEADER -->
 <section class="page-header">
   <div class="section-tag">Our Work</div>
   <h1>Recent <span class="gold">Projects</span></h1>
 </section>
 
 <div class="portfolio-note">
-  These are placeholder project entries — swap in your real project names, images, and short write-ups here.
+  The projects below are clearly labeled as either real client work or demo concepts. Demo concepts show the kind of work ZanHybrid can deliver and are not real client projects.
 </div>
 
-<!-- PORTFOLIO GRID -->
 <div class="portfolio-grid">
-  <div class="portfolio-card reveal">
-    <div class="portfolio-thumb">🌐</div>
+<div class="portfolio-card reveal">
+    <div class="portfolio-thumb">🏨<span class="demo-tag">Demo Concept</span></div>
     <div class="portfolio-body">
-      <span class="portfolio-tag">ICT Solutions</span>
-      <h3>Network Infrastructure Rollout</h3>
-      <p>Designed and deployed a full office network setup, including switching, wireless coverage, and cabling.</p>
+      <span class="portfolio-tag">Hospitality</span>
+      <h3>Zanzibar Hotel Website — Demo Concept</h3>
+      <p><strong>Problem:</strong> Hotel had no website and relied only on word of mouth and third-party booking sites.</p>
+      <p><strong>Solution:</strong> Built a professional multi-page site with rooms, WhatsApp booking and Google Maps.</p>
+      <p><strong>Tech:</strong> HTML, CSS, JavaScript, Netlify Forms</p>
     </div>
   </div>
-  <div class="portfolio-card reveal">
-    <div class="portfolio-thumb">☁️</div>
+<div class="portfolio-card reveal">
+    <div class="portfolio-thumb">🍽️<span class="demo-tag">Demo Concept</span></div>
     <div class="portfolio-body">
-      <span class="portfolio-tag">Cloud Services</span>
-      <h3>Cloud Migration Project</h3>
-      <p>Migrated an organization's on-premise systems to a cloud environment with minimal downtime.</p>
+      <span class="portfolio-tag">Hospitality</span>
+      <h3>Restaurant Website — Demo Concept</h3>
+      <p><strong>Problem:</strong> Restaurant needed an online menu and easy way for customers to reach them.</p>
+      <p><strong>Solution:</strong> Landing page with menu, location, and a WhatsApp ordering button.</p>
+      <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
     </div>
   </div>
-  <div class="portfolio-card reveal">
-    <div class="portfolio-thumb">🔒</div>
+<div class="portfolio-card reveal">
+    <div class="portfolio-thumb">🧭<span class="demo-tag">Demo Concept</span></div>
     <div class="portfolio-body">
-      <span class="portfolio-tag">Cyber Security</span>
-      <h3>Security Audit & Hardening</h3>
-      <p>Ran a full security audit and implemented fixes to close identified vulnerabilities.</p>
+      <span class="portfolio-tag">Tourism</span>
+      <h3>Tour Operator Website — Demo Concept</h3>
+      <p><strong>Problem:</strong> Tour operator had no way to showcase tour packages or take inquiries online.</p>
+      <p><strong>Solution:</strong> Tour listing pages with WhatsApp inquiry buttons and a simple booking form.</p>
+      <p><strong>Tech:</strong> HTML, CSS, JavaScript, Netlify Forms</p>
     </div>
   </div>
-  <div class="portfolio-card reveal">
-    <div class="portfolio-thumb">💼</div>
+<div class="portfolio-card reveal">
+    <div class="portfolio-thumb">📡<span class="demo-tag">Demo Concept</span></div>
     <div class="portfolio-body">
-      <span class="portfolio-tag">Consultancy</span>
-      <h3>Digital Transformation Roadmap</h3>
-      <p>Built a phased technology roadmap aligned with the client's growth plans and budget.</p>
-    </div>
-  </div>
-  <div class="portfolio-card reveal">
-    <div class="portfolio-thumb">🖥️</div>
-    <div class="portfolio-body">
-      <span class="portfolio-tag">ICT Solutions</span>
-      <h3>Systems Integration</h3>
-      <p>Connected multiple existing business systems so data flows between them automatically.</p>
-    </div>
-  </div>
-  <div class="portfolio-card reveal">
-    <div class="portfolio-thumb">📊</div>
-    <div class="portfolio-body">
-      <span class="portfolio-tag">Cloud Services</span>
-      <h3>Cost Optimization Review</h3>
-      <p>Reviewed a client's cloud spend and restructured resources to reduce recurring cost.</p>
+      <span class="portfolio-tag">Networking</span>
+      <h3>Small Business Network — Demo Concept</h3>
+      <p><strong>Problem:</strong> Office had unreliable Wi-Fi and no separation between staff and guest networks.</p>
+      <p><strong>Solution:</strong> Reconfigured router/switch setup with a dedicated guest network and better coverage.</p>
+      <p><strong>Tech:</strong> Ubiquiti / TP-Link networking equipment</p>
     </div>
   </div>
 </div>
 
-<!-- CTA -->
+<div class="portfolio-note">
+  Have a real project we've completed together? Let us know and we'll add it here with your permission.
+</div>
+
 <div class="cta-section">
   <div class="cta-bg"></div>
   <div class="cta-content reveal">
     <div class="section-tag">Ready to Start?</div>
-    <h2 class="cta-title">Let's Build Your <span style="background:var(--gold-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Digital Future</span> Together</h2>
+    <h2 class="cta-title">Let's Build <span style="background:var(--gold-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Your Project</span></h2>
     <p class="cta-text">Have a project in mind? Let's talk about it.</p>
     <div class="cta-buttons">
-      <a href="contact.html" class="btn-primary">Schedule Consultation →</a>
+      <a href="contact.html" class="btn-primary">Get a Free Consultation →</a>
       <a href="services.html" class="btn-secondary">View Services</a>
     </div>
   </div>
 </div>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-grid">
     <div class="footer-brand reveal-left">
       <img src="../images/logo.png" alt="ZanHybrid" />
-      <p>ZanHybrid is your trusted technology partner delivering innovative ICT solutions, cloud services, expert consultancy and robust cyber security — to anyone, anywhere, anytime.</p>
+      <p>ZanHybrid helps businesses in Zanzibar and Tanzania grow with websites, networking, cloud, cybersecurity and managed IT support.</p>
       <div class="footer-socials">
         <a href="#" class="social-btn" title="LinkedIn" rel="noopener noreferrer">in</a>
         <a href="#" class="social-btn" title="Twitter" rel="noopener noreferrer">𝕏</a>
@@ -196,20 +150,24 @@
     <div class="footer-col reveal">
       <h4>Services</h4>
       <ul>
-        <li><a href="services.html#ict">ICT Solutions</a></li>
-        <li><a href="services.html#cloud">Cloud Services</a></li>
-        <li><a href="services.html#consultant">Consultancy</a></li>
-        <li><a href="services.html#security">Cyber Security</a></li>
+        <li><a href="services.html#website">Website Development</a></li>
+        <li><a href="services.html#itsupport">IT Support</a></li>
+        <li><a href="services.html#networking">Networking</a></li>
+        <li><a href="services.html#cloud">Cloud & Email</a></li>
+        <li><a href="services.html#security">Cybersecurity</a></li>
+        <li><a href="services.html#consultancy">IT Consultancy</a></li>
       </ul>
     </div>
     <div class="footer-col reveal">
       <h4>Company</h4>
       <ul>
         <li><a href="about.html">About Us</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="managed-it.html">Managed IT Support</a></li>
+        <li><a href="hospitality.html">Hotel & Tourism</a></li>
         <li><a href="portfolio.html">Portfolio</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a href="#">Careers</a></li>
       </ul>
     </div>
     <div class="footer-col reveal-right">
@@ -242,7 +200,8 @@
   </div>
 </footer>
 
-<a href="https://wa.me/255622789053" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">💬</a>
+<a href="https://wa.me/255622789053?text=Hello%20ZanHybrid%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">💬</a>
+
 
 <script>
 (function(){

@@ -3,60 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="ZanHybrid Services - ICT Solutions, Cloud Services, Consultancy and Cyber Security." />
-  <title>Services | ZanHybrid</title>
+  <meta name="description" content="Website development, IT support, networking, cloud, cybersecurity and IT consultancy for businesses in Zanzibar and Tanzania." />
+  <link rel="canonical" href="https://zanhybrid.co.tz/pages/services.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Services | ZanHybrid - Websites, IT Support, Networking, Cloud, Security" />
+  <meta property="og:description" content="Website development, IT support, networking, cloud, cybersecurity and IT consultancy for businesses in Zanzibar and Tanzania." />
+  <meta property="og:url" content="https://zanhybrid.co.tz/pages/services.html" />
+  <meta property="og:image" content="https://zanhybrid.co.tz/images/logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Services | ZanHybrid - Websites, IT Support, Networking, Cloud, Security" />
+  <meta name="twitter:description" content="Website development, IT support, networking, cloud, cybersecurity and IT consultancy for businesses in Zanzibar and Tanzania." />
+  <title>Services | ZanHybrid - Websites, IT Support, Networking, Cloud, Security</title>
   <link rel="icon" type="image/png" href="../images/logo.png" />
   <link rel="stylesheet" href="../css/style.css" />
   <style>
-    /* SERVICES-SPECIFIC */
-    .page-header { padding-top: 140px; padding-bottom: 60px; text-align: center; }
-    .page-header h1 { font-family: 'Cinzel', serif; font-size: 2.4rem; color: var(--gold-primary); }
-
     .service-block { max-width: 1100px; margin: 0 auto 90px; padding: 0 5%; scroll-margin-top: 100px; }
-    .service-block-header { display: flex; align-items: center; gap: 18px; margin-bottom: 20px; }
+    .service-block-header { display: flex; align-items: center; gap: 18px; margin-bottom: 20px; flex-wrap: wrap; }
     .service-block-icon { font-size: 2.2rem; }
     .service-block-header h2 { font-family: 'Cinzel', serif; color: var(--gold-primary); font-size: 1.6rem; }
-    .service-block p.desc { color: var(--white-muted); line-height: 1.8; max-width: 800px; margin-bottom: 26px; }
-    .service-sub-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-    .service-sub-item {
-      background: var(--black-panel); border: 1px solid rgba(255,215,0,0.12);
-      border-radius: 10px; padding: 18px 20px; color: var(--white-muted); font-size: 0.9rem;
-    }
-    .service-sub-item strong { color: var(--gold-primary); display: block; margin-bottom: 4px; }
-
-    @media (max-width: 768px) {
-      .service-sub-grid { grid-template-columns: 1fr; }
-    }
-
-    /* THEME TOGGLE */
-    [data-theme="light"] {
-      --black-deep: #f5f2e8;
-      --black-panel: #ffffff;
-      --white: #1a1a1a;
-      --white-muted: #55524a;
-    }
-    [data-theme="light"] body { background: var(--black-deep); color: var(--white); }
-    .theme-toggle-btn {
-      background: none; border: 1px solid rgba(255,215,0,0.3); color: var(--gold-primary);
-      border-radius: 20px; padding: 6px 14px; font-size: 0.85rem; cursor: pointer;
-      transition: var(--transition); margin-right: 14px;
-    }
-    .theme-toggle-btn:hover { background: rgba(255,215,0,0.1); }
-
-    /* WHATSAPP FLOAT */
-    .whatsapp-float {
-      position: fixed; bottom: 24px; right: 24px; z-index: 1002;
-      width: 56px; height: 56px; border-radius: 50%;
-      background: #25D366; display: flex; align-items: center; justify-content: center;
-      font-size: 1.6rem; text-decoration: none; box-shadow: 0 4px 16px rgba(0,0,0,0.35);
-      transition: var(--transition);
-    }
-    .whatsapp-float:hover { transform: scale(1.08); }
+    .service-block p.desc { color: var(--white-muted); line-height: 1.8; max-width: 800px; margin-bottom: 22px; }
+    .service-sub-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 22px; }
+    .service-sub-item { background: var(--black-panel); border: 1px solid rgba(255,215,0,0.12); border-radius: 10px; padding: 16px 20px; color: var(--white-muted); font-size: 0.9rem; }
+    .service-block-cta { display: flex; gap: 14px; flex-wrap: wrap; }
+    @media (max-width: 768px) { .service-sub-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
-
-<!-- NAV -->
 <nav>
   <a href="../index.html" class="nav-logo">
     <img src="../images/logo.png" alt="ZanHybrid Logo" />
@@ -68,7 +40,8 @@
   <ul class="nav-links">
     <li><a href="../index.html">Home</a></li>
     <li><a href="about.html">About</a></li>
-    <li><a href="services.html">Services</a></li>
+    <li><a href="services.html" class="active">Services</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
     <li><a href="portfolio.html">Portfolio</a></li>
     <li><a href="blog.html">Blog</a></li>
     <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
@@ -79,102 +52,141 @@
   </div>
 </nav>
 
-<!-- MOBILE MENU -->
 <div class="mobile-menu">
   <a href="../index.html">Home</a>
   <a href="about.html">About</a>
   <a href="services.html">Services</a>
+  <a href="pricing.html">Pricing</a>
   <a href="portfolio.html">Portfolio</a>
   <a href="blog.html">Blog</a>
   <a href="contact.html">Contact Us →</a>
 </div>
 
-<!-- PAGE HEADER -->
 <section class="page-header">
   <div class="section-tag">What We Do</div>
   <h1>Our <span class="gold">Services</span></h1>
+  <p>Six practical service areas covering what most Zanzibar and Tanzania businesses actually need.</p>
 </section>
 
-<!-- ICT -->
-<div id="ict" class="service-block">
-  <div class="service-block-header">
-    <span class="service-block-icon">🌐</span>
-    <h2>ICT Solutions</h2>
-  </div>
-  <p class="desc">End-to-end information and communication technology infrastructure design, deployment, and management — built to keep your business running without interruption.</p>
+<div id="website" class="service-block">
+  <div class="service-block-header"><span class="service-block-icon">🌐</span><h2>Website Development</h2></div>
+  <p class="desc">Professional business websites built to bring in customers, not just look good.</p>
   <div class="service-sub-grid">
-    <div class="service-sub-item"><strong>Network Infrastructure Design</strong>Structured cabling, LAN/WAN, and wireless network design tailored to your site.</div>
-    <div class="service-sub-item"><strong>IT Hardware & Software Supply</strong>Sourcing and setup of servers, workstations, and licensed software.</div>
-    <div class="service-sub-item"><strong>Systems Integration</strong>Connecting existing systems so data and workflows move seamlessly.</div>
-    <div class="service-sub-item"><strong>Managed IT Services</strong>Ongoing monitoring and maintenance so your team can focus on the business.</div>
+    <div class="service-sub-item">Business Websites</div>
+    <div class="service-sub-item">Landing Pages</div>
+    <div class="service-sub-item">E-commerce Websites</div>
+    <div class="service-sub-item">Domain Setup</div>
+    <div class="service-sub-item">Business Email Setup</div>
+    <div class="service-sub-item">Website Maintenance</div>
+  </div>
+  <div class="service-block-cta">
+    <a href="contact.html" class="btn-primary">Request a Quote →</a>
+    <a href="https://wa.me/255622789053?text=Hello%20ZanHybrid%2C%20I%20am%20interested%20in%20a%20business%20website.%20Please%20send%20me%20your%20packages." class="wa-cta" target="_blank" rel="noopener noreferrer">💬 Chat on WhatsApp</a>
   </div>
 </div>
 
-<!-- CLOUD -->
+<div id="itsupport" class="service-block">
+  <div class="service-block-header"><span class="service-block-icon">🛠️</span><h2>IT Support & Managed Services</h2></div>
+  <p class="desc">Day-to-day technical support so small issues never turn into downtime.</p>
+  <div class="service-sub-grid">
+    <div class="service-sub-item">Computer Troubleshooting</div>
+    <div class="service-sub-item">Software Installation</div>
+    <div class="service-sub-item">IT Maintenance</div>
+    <div class="service-sub-item">Business IT Support</div>
+    <div class="service-sub-item">Remote Support</div>
+    <div class="service-sub-item">On-site Support</div>
+  </div>
+  <div class="service-block-cta">
+    <a href="contact.html" class="btn-primary">Request a Quote →</a>
+    <a href="https://wa.me/255622789053?text=Hello%20ZanHybrid%2C%20I%20need%20IT%20support%20for%20my%20business." class="wa-cta" target="_blank" rel="noopener noreferrer">💬 Chat on WhatsApp</a>
+  </div>
+</div>
+
+<div id="networking" class="service-block">
+  <div class="service-block-header"><span class="service-block-icon">📡</span><h2>Networking & Infrastructure</h2></div>
+  <p class="desc">Reliable office connectivity, set up right the first time.</p>
+  <div class="service-sub-grid">
+    <div class="service-sub-item">Office Wi-Fi</div>
+    <div class="service-sub-item">LAN Installation</div>
+    <div class="service-sub-item">Router Configuration</div>
+    <div class="service-sub-item">Switch Configuration</div>
+    <div class="service-sub-item">Network Troubleshooting & Assessment</div>
+    <div class="service-sub-item">Server Setup</div>
+  </div>
+  <div class="service-block-cta">
+    <a href="contact.html" class="btn-primary">Request a Quote →</a>
+    <a href="https://wa.me/255622789053?text=Hello%20ZanHybrid%2C%20I%20need%20help%20with%20my%20business%20network/Wi-Fi." class="wa-cta" target="_blank" rel="noopener noreferrer">💬 Chat on WhatsApp</a>
+  </div>
+</div>
+
 <div id="cloud" class="service-block">
-  <div class="service-block-header">
-    <span class="service-block-icon">☁️</span>
-    <h2>Cloud Services</h2>
-  </div>
-  <p class="desc">Flexible, scalable cloud solutions that modernize your operations, reduce costs, and accelerate growth.</p>
+  <div class="service-block-header"><span class="service-block-icon">☁️</span><h2>Cloud & Business Productivity</h2></div>
+  <p class="desc">Professional tools so your team can communicate and collaborate properly.</p>
   <div class="service-sub-grid">
-    <div class="service-sub-item"><strong>Cloud Migration & Architecture</strong>Moving workloads to the cloud with minimal downtime and a clean architecture.</div>
-    <div class="service-sub-item"><strong>SaaS / PaaS / IaaS Solutions</strong>Choosing and deploying the right cloud model for your workload.</div>
-    <div class="service-sub-item"><strong>Hybrid Cloud Deployment</strong>Blending on-premise and cloud infrastructure where it makes sense.</div>
-    <div class="service-sub-item"><strong>Cloud Cost Optimization</strong>Right-sizing resources so you're not paying for capacity you don't use.</div>
+    <div class="service-sub-item">Professional Business Email</div>
+    <div class="service-sub-item">Google Workspace Setup</div>
+    <div class="service-sub-item">Microsoft 365 Setup</div>
+    <div class="service-sub-item">Cloud Migration</div>
+    <div class="service-sub-item">Cloud Backup</div>
+    <div class="service-sub-item">File Sharing & Collaboration</div>
+  </div>
+  <div class="service-block-cta">
+    <a href="contact.html" class="btn-primary">Request a Quote →</a>
+    <a href="https://wa.me/255622789053?text=Hello%20ZanHybrid%2C%20I%20would%20like%20to%20set%20up%20professional%20business%20email%20or%20cloud%20tools." class="wa-cta" target="_blank" rel="noopener noreferrer">💬 Chat on WhatsApp</a>
   </div>
 </div>
 
-<!-- CONSULTANCY -->
-<div id="consultant" class="service-block">
-  <div class="service-block-header">
-    <span class="service-block-icon">💼</span>
-    <h2>Consultancy</h2>
-  </div>
-  <p class="desc">Strategic technology consulting to help organizations navigate digital transformation with confidence.</p>
-  <div class="service-sub-grid">
-    <div class="service-sub-item"><strong>Digital Transformation Strategy</strong>A clear plan for modernizing operations without disrupting the business.</div>
-    <div class="service-sub-item"><strong>IT Governance & Compliance</strong>Policies and controls that keep you aligned with regulatory requirements.</div>
-    <div class="service-sub-item"><strong>Technology Roadmapping</strong>A prioritized, budget-aware plan for where your technology goes next.</div>
-    <div class="service-sub-item"><strong>Business Process Optimization</strong>Streamlining workflows so technology actually saves time.</div>
-  </div>
-</div>
-
-<!-- SECURITY -->
 <div id="security" class="service-block">
-  <div class="service-block-header">
-    <span class="service-block-icon">🔒</span>
-    <h2>Cyber Security</h2>
-  </div>
-  <p class="desc">Robust security frameworks protecting your digital assets from evolving cyber threats and vulnerabilities.</p>
+  <div class="service-block-header"><span class="service-block-icon">🔒</span><h2>Cybersecurity</h2></div>
+  <p class="desc">Practical protection appropriate for a small or medium business, not enterprise overkill.</p>
   <div class="service-sub-grid">
-    <div class="service-sub-item"><strong>Security Audits & Penetration Testing</strong>Finding weaknesses before attackers do.</div>
-    <div class="service-sub-item"><strong>Threat Monitoring & Response</strong>Ongoing monitoring with a clear response plan when something happens.</div>
-    <div class="service-sub-item"><strong>Data Protection & Encryption</strong>Keeping sensitive data unreadable to anyone who shouldn't have it.</div>
-    <div class="service-sub-item"><strong>Security Awareness Training</strong>Helping your team recognize phishing and social engineering attempts.</div>
+    <div class="service-sub-item">Website Security</div>
+    <div class="service-sub-item">Business Email Security</div>
+    <div class="service-sub-item">Security Assessment</div>
+    <div class="service-sub-item">Security Hardening</div>
+    <div class="service-sub-item">Backup & Recovery Planning</div>
+    <div class="service-sub-item">Cybersecurity Awareness Training</div>
+  </div>
+  <div class="service-block-cta">
+    <a href="contact.html" class="btn-primary">Request a Quote →</a>
+    <a href="https://wa.me/255622789053?text=Hello%20ZanHybrid%2C%20I%20would%20like%20a%20cybersecurity%20assessment." class="wa-cta" target="_blank" rel="noopener noreferrer">💬 Chat on WhatsApp</a>
   </div>
 </div>
 
-<!-- CTA -->
+<div id="consultancy" class="service-block">
+  <div class="service-block-header"><span class="service-block-icon">💼</span><h2>IT Consultancy</h2></div>
+  <p class="desc">Independent, practical advice before you spend money on technology.</p>
+  <div class="service-sub-grid">
+    <div class="service-sub-item">IT Audits</div>
+    <div class="service-sub-item">Technology Planning</div>
+    <div class="service-sub-item">Business IT Strategy</div>
+    <div class="service-sub-item">Infrastructure Planning</div>
+    <div class="service-sub-item">Technology Recommendations</div>
+  </div>
+  <div class="service-block-cta">
+    <a href="contact.html" class="btn-primary">Request a Quote →</a>
+    <a href="https://wa.me/255622789053?text=Hello%20ZanHybrid%2C%20I%20would%20like%20an%20IT%20consultancy%20session%20for%20my%20business." class="wa-cta" target="_blank" rel="noopener noreferrer">💬 Chat on WhatsApp</a>
+  </div>
+</div>
+
 <div class="cta-section">
   <div class="cta-bg"></div>
   <div class="cta-content reveal">
-    <div class="section-tag">Ready to Start?</div>
-    <h2 class="cta-title">Let's Build Your <span style="background:var(--gold-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Digital Future</span> Together</h2>
-    <p class="cta-text">Tell us what you need and we'll put together a plan that fits.</p>
+    <div class="section-tag">Not Sure Where to Start?</div>
+    <h2 class="cta-title">Let's Talk About What <span style="background:var(--gold-gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Your Business</span> Needs</h2>
+    <p class="cta-text">Book a free consultation and we'll point you to the right service and a clear quote.</p>
     <div class="cta-buttons">
-      <a href="contact.html" class="btn-primary">Schedule Consultation →</a>
-      <a href="portfolio.html" class="btn-secondary">See Our Work</a>
+      <a href="contact.html" class="btn-primary">Get a Free Consultation →</a>
+      <a href="pricing.html" class="btn-secondary">See Pricing</a>
     </div>
   </div>
 </div>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-grid">
     <div class="footer-brand reveal-left">
       <img src="../images/logo.png" alt="ZanHybrid" />
-      <p>ZanHybrid is your trusted technology partner delivering innovative ICT solutions, cloud services, expert consultancy and robust cyber security — to anyone, anywhere, anytime.</p>
+      <p>ZanHybrid helps businesses in Zanzibar and Tanzania grow with websites, networking, cloud, cybersecurity and managed IT support.</p>
       <div class="footer-socials">
         <a href="#" class="social-btn" title="LinkedIn" rel="noopener noreferrer">in</a>
         <a href="#" class="social-btn" title="Twitter" rel="noopener noreferrer">𝕏</a>
@@ -185,20 +197,24 @@
     <div class="footer-col reveal">
       <h4>Services</h4>
       <ul>
-        <li><a href="services.html#ict">ICT Solutions</a></li>
-        <li><a href="services.html#cloud">Cloud Services</a></li>
-        <li><a href="services.html#consultant">Consultancy</a></li>
-        <li><a href="services.html#security">Cyber Security</a></li>
+        <li><a href="services.html#website">Website Development</a></li>
+        <li><a href="services.html#itsupport">IT Support</a></li>
+        <li><a href="services.html#networking">Networking</a></li>
+        <li><a href="services.html#cloud">Cloud & Email</a></li>
+        <li><a href="services.html#security">Cybersecurity</a></li>
+        <li><a href="services.html#consultancy">IT Consultancy</a></li>
       </ul>
     </div>
     <div class="footer-col reveal">
       <h4>Company</h4>
       <ul>
         <li><a href="about.html">About Us</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="managed-it.html">Managed IT Support</a></li>
+        <li><a href="hospitality.html">Hotel & Tourism</a></li>
         <li><a href="portfolio.html">Portfolio</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a href="#">Careers</a></li>
       </ul>
     </div>
     <div class="footer-col reveal-right">
@@ -231,7 +247,8 @@
   </div>
 </footer>
 
-<a href="https://wa.me/255622789053" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">💬</a>
+<a href="https://wa.me/255622789053?text=Hello%20ZanHybrid%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">💬</a>
+
 
 <script>
 (function(){

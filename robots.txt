@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://zanhybrid.netlify.app/sitemap.xml
+Sitemap: https://zanhybrid.co.tz/sitemap.xml

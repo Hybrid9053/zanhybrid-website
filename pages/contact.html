@@ -3,71 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Contact ZanHybrid - ICT Solutions, Cloud Services, Consultancy and Cyber Security." />
-  <title>Contact Us | ZanHybrid</title>
+  <meta name="description" content="Request a free consultation or quote from ZanHybrid for websites, IT support, networking, cloud and cybersecurity in Zanzibar." />
+  <link rel="canonical" href="https://zanhybrid.co.tz/pages/contact.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Contact Us | ZanHybrid - Free Consultation & Quotes" />
+  <meta property="og:description" content="Request a free consultation or quote from ZanHybrid for websites, IT support, networking, cloud and cybersecurity in Zanzibar." />
+  <meta property="og:url" content="https://zanhybrid.co.tz/pages/contact.html" />
+  <meta property="og:image" content="https://zanhybrid.co.tz/images/logo.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contact Us | ZanHybrid - Free Consultation & Quotes" />
+  <meta name="twitter:description" content="Request a free consultation or quote from ZanHybrid for websites, IT support, networking, cloud and cybersecurity in Zanzibar." />
+  <title>Contact Us | ZanHybrid - Free Consultation & Quotes</title>
   <link rel="icon" type="image/png" href="../images/logo.png" />
   <link rel="stylesheet" href="../css/style.css" />
   <style>
-    /* CONTACT-SPECIFIC */
-    .page-header { padding-top: 140px; padding-bottom: 60px; text-align: center; }
-    .page-header h1 { font-family: 'Cinzel', serif; font-size: 2.4rem; color: var(--gold-primary); }
-
-    .contact-wrap {
-      display: grid; grid-template-columns: 1fr 1.2fr; gap: 50px;
-      max-width: 1100px; margin: 0 auto 90px; padding: 0 5%;
-    }
+    .contact-wrap { display: grid; grid-template-columns: 1fr 1.2fr; gap: 50px; max-width: 1100px; margin: 0 auto 90px; padding: 0 5%; }
     .contact-info-list { display: flex; flex-direction: column; gap: 22px; }
-    .contact-info-item {
-      display: flex; gap: 16px; background: var(--black-panel);
-      border: 1px solid rgba(255,215,0,0.12); border-radius: 10px; padding: 18px;
-    }
+    .contact-info-item { display: flex; gap: 16px; background: var(--black-panel); border: 1px solid rgba(255,215,0,0.12); border-radius: 10px; padding: 18px; }
     .contact-info-item .icon { font-size: 1.4rem; }
     .contact-info-item h4 { color: var(--gold-primary); font-size: 0.9rem; margin-bottom: 4px; }
     .contact-info-item p { color: var(--white-muted); font-size: 0.85rem; line-height: 1.5; }
-
+    .contact-wa-cta { margin-top: 8px; }
     .contact-form { background: var(--black-panel); border: 1px solid rgba(255,215,0,0.12); border-radius: 12px; padding: 32px; }
     .contact-form .field { margin-bottom: 18px; }
     .contact-form label { display: block; color: var(--white-muted); font-size: 0.8rem; margin-bottom: 6px; letter-spacing: 0.05em; text-transform: uppercase; }
-    .contact-form input, .contact-form textarea {
+    .contact-form input, .contact-form textarea, .contact-form select {
       width: 100%; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,215,0,0.2);
       border-radius: 8px; padding: 12px 14px; color: var(--white); font-family: inherit; font-size: 0.9rem;
     }
-    .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--gold-primary); }
-    .contact-form textarea { resize: vertical; min-height: 120px; }
-    /* honeypot field must stay hidden from real users, visible to bots that ignore CSS */
+    .contact-form input:focus, .contact-form textarea:focus, .contact-form select:focus { outline: none; border-color: var(--gold-primary); }
+    .contact-form textarea { resize: vertical; min-height: 110px; }
+    .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
     .hp-field { position: absolute; left: -9999px; top: -9999px; }
-
-    @media (max-width: 900px) { .contact-wrap { grid-template-columns: 1fr; } }
-
-    /* THEME TOGGLE */
-    [data-theme="light"] {
-      --black-deep: #f5f2e8;
-      --black-panel: #ffffff;
-      --white: #1a1a1a;
-      --white-muted: #55524a;
-    }
-    [data-theme="light"] body { background: var(--black-deep); color: var(--white); }
-    .theme-toggle-btn {
-      background: none; border: 1px solid rgba(255,215,0,0.3); color: var(--gold-primary);
-      border-radius: 20px; padding: 6px 14px; font-size: 0.85rem; cursor: pointer;
-      transition: var(--transition); margin-right: 14px;
-    }
-    .theme-toggle-btn:hover { background: rgba(255,215,0,0.1); }
-
-    /* WHATSAPP FLOAT */
-    .whatsapp-float {
-      position: fixed; bottom: 24px; right: 24px; z-index: 1002;
-      width: 56px; height: 56px; border-radius: 50%;
-      background: #25D366; display: flex; align-items: center; justify-content: center;
-      font-size: 1.6rem; text-decoration: none; box-shadow: 0 4px 16px rgba(0,0,0,0.35);
-      transition: var(--transition);
-    }
-    .whatsapp-float:hover { transform: scale(1.08); }
+    .form-success { display: none; background: rgba(37,211,102,0.1); border: 1px solid #25D366; border-radius: 10px; padding: 16px; color: #25D366; font-size: 0.9rem; margin-bottom: 18px; text-align: center; }
+    @media (max-width: 900px) { .contact-wrap { grid-template-columns: 1fr; } .field-row { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
-
-<!-- NAV -->
 <nav>
   <a href="../index.html" class="nav-logo">
     <img src="../images/logo.png" alt="ZanHybrid Logo" />
@@ -80,6 +52,7 @@
     <li><a href="../index.html">Home</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="services.html">Services</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
     <li><a href="portfolio.html">Portfolio</a></li>
     <li><a href="blog.html">Blog</a></li>
     <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
@@ -90,91 +63,76 @@
   </div>
 </nav>
 
-<!-- MOBILE MENU -->
 <div class="mobile-menu">
   <a href="../index.html">Home</a>
   <a href="about.html">About</a>
   <a href="services.html">Services</a>
+  <a href="pricing.html">Pricing</a>
   <a href="portfolio.html">Portfolio</a>
   <a href="blog.html">Blog</a>
   <a href="contact.html">Contact Us →</a>
 </div>
 
-<!-- PAGE HEADER -->
 <section class="page-header">
   <div class="section-tag">Get In Touch</div>
   <h1>Contact <span class="gold">Us</span></h1>
+  <p>Request a quote, book a free consultation, or just message us on WhatsApp.</p>
 </section>
 
 <div class="contact-wrap">
   <div class="contact-info-list">
-    <div class="contact-info-item reveal-left">
-      <span class="icon">📍</span>
-      <div>
-        <h4>Location</h4>
-        <p>Zanzibar town, Tanzania</p>
-      </div>
-    </div>
-    <div class="contact-info-item reveal-left">
-      <span class="icon">📞</span>
-      <div>
-        <h4>Phone</h4>
-        <p>+255 622 789 053</p>
-      </div>
-    </div>
-    <div class="contact-info-item reveal-left">
-      <span class="icon">✉️</span>
-      <div>
-        <h4>Email</h4>
-        <p>zanhybrid9053@gmail.com</p>
-      </div>
-    </div>
-    <div class="contact-info-item reveal-left">
-      <span class="icon">🕐</span>
-      <div>
-        <h4>Working Hours</h4>
-        <p>Mon – Fri: 8AM – 6PM<br/>24/7 Support Available</p>
-      </div>
-    </div>
+    <div class="contact-info-item reveal-left"><span class="icon">📍</span><div><h4>Location</h4><p>Zanzibar town, Tanzania</p></div></div>
+    <div class="contact-info-item reveal-left"><span class="icon">📞</span><div><h4>Phone</h4><p>+255 622 789 053</p></div></div>
+    <div class="contact-info-item reveal-left"><span class="icon">✉️</span><div><h4>Email</h4><p>zanhybrid9053@gmail.com</p></div></div>
+    <div class="contact-info-item reveal-left"><span class="icon">🕐</span><div><h4>Working Hours</h4><p>Mon – Fri: 8AM – 6PM<br/>24/7 Support Available</p></div></div>
+    <a href="https://wa.me/255622789053?text=Hello%20ZanHybrid%2C%20I%20would%20like%20to%20get%20in%20touch." class="wa-cta contact-wa-cta" target="_blank" rel="noopener noreferrer">💬 Chat on WhatsApp Instead</a>
   </div>
 
-  <!--
-    Netlify Forms: data-netlify="true" tells Netlify to capture this form at build/deploy time.
-    The hidden "bot-field" is a honeypot - real users never fill it, bots usually do,
-    so Netlify silently drops any submission where it's not empty.
-  -->
-  <form class="contact-form reveal" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-    <input type="hidden" name="form-name" value="contact" />
-    <p class="hp-field">
-      <label>Leave this field empty <input name="bot-field" /></label>
-    </p>
+  <div>
+    <div class="form-success" id="form-success">Thanks - your message has been sent. We'll get back to you shortly.</div>
+    <form class="contact-form reveal" name="quote" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="quote-form">
+      <input type="hidden" name="form-name" value="quote" />
+      <p class="hp-field"><label>Leave this field empty <input name="bot-field" /></label></p>
 
-    <div class="field">
-      <label for="name">Full Name</label>
-      <input type="text" id="name" name="name" required maxlength="100" />
-    </div>
-    <div class="field">
-      <label for="email">Email Address</label>
-      <input type="email" id="email" name="email" required maxlength="150" />
-    </div>
-    <div class="field">
-      <label for="subject">Subject</label>
-      <input type="text" id="subject" name="subject" required maxlength="150" />
-    </div>
-    <div class="field">
-      <label for="message">Message</label>
-      <textarea id="message" name="message" required maxlength="2000"></textarea>
-    </div>
-    <button type="submit" class="btn-primary">Send Message →</button>
-  </form>
+      <div class="field-row">
+        <div class="field"><label for="name">Full Name</label><input type="text" id="name" name="name" required maxlength="100" /></div>
+        <div class="field"><label for="business">Business Name</label><input type="text" id="business" name="business" maxlength="100" /></div>
+      </div>
+      <div class="field-row">
+        <div class="field"><label for="phone">Phone / WhatsApp</label><input type="tel" id="phone" name="phone" required maxlength="30" /></div>
+        <div class="field"><label for="email">Email Address</label><input type="email" id="email" name="email" required maxlength="150" /></div>
+      </div>
+      <div class="field">
+        <label for="service">Service Needed</label>
+        <select id="service" name="service" required>
+          <option value="">Select a service</option>
+          <option value="Website">Website</option>
+          <option value="IT Support">IT Support</option>
+          <option value="Networking">Networking</option>
+          <option value="Cloud">Cloud</option>
+          <option value="Cybersecurity">Cybersecurity</option>
+          <option value="Consultancy">Consultancy</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="budget">Budget Range (optional)</label>
+        <input type="text" id="budget" name="budget" maxlength="100" placeholder="e.g. TZS 350,000 - 650,000" />
+      </div>
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required maxlength="2000"></textarea>
+      </div>
+      <button type="submit" class="btn-primary">Send Message →</button>
+    </form>
+  </div>
 </div>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-grid">
     <div class="footer-brand reveal-left">
       <img src="../images/logo.png" alt="ZanHybrid" />
-      <p>ZanHybrid is your trusted technology partner delivering innovative ICT solutions, cloud services, expert consultancy and robust cyber security — to anyone, anywhere, anytime.</p>
+      <p>ZanHybrid helps businesses in Zanzibar and Tanzania grow with websites, networking, cloud, cybersecurity and managed IT support.</p>
       <div class="footer-socials">
         <a href="#" class="social-btn" title="LinkedIn" rel="noopener noreferrer">in</a>
         <a href="#" class="social-btn" title="Twitter" rel="noopener noreferrer">𝕏</a>
@@ -185,20 +143,24 @@
     <div class="footer-col reveal">
       <h4>Services</h4>
       <ul>
-        <li><a href="services.html#ict">ICT Solutions</a></li>
-        <li><a href="services.html#cloud">Cloud Services</a></li>
-        <li><a href="services.html#consultant">Consultancy</a></li>
-        <li><a href="services.html#security">Cyber Security</a></li>
+        <li><a href="services.html#website">Website Development</a></li>
+        <li><a href="services.html#itsupport">IT Support</a></li>
+        <li><a href="services.html#networking">Networking</a></li>
+        <li><a href="services.html#cloud">Cloud & Email</a></li>
+        <li><a href="services.html#security">Cybersecurity</a></li>
+        <li><a href="services.html#consultancy">IT Consultancy</a></li>
       </ul>
     </div>
     <div class="footer-col reveal">
       <h4>Company</h4>
       <ul>
         <li><a href="about.html">About Us</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="managed-it.html">Managed IT Support</a></li>
+        <li><a href="hospitality.html">Hotel & Tourism</a></li>
         <li><a href="portfolio.html">Portfolio</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a href="#">Careers</a></li>
       </ul>
     </div>
     <div class="footer-col reveal-right">
@@ -231,7 +193,23 @@
   </div>
 </footer>
 
-<a href="https://wa.me/255622789053" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">💬</a>
+<a href="https://wa.me/255622789053?text=Hello%20ZanHybrid%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">💬</a>
+
+
+<script>
+document.getElementById('quote-form').addEventListener('submit', function(e){
+  var form = e.target;
+  var data = new FormData(form);
+  fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams(data).toString() })
+    .then(function(){
+      e.preventDefault();
+      document.getElementById('form-success').style.display = 'block';
+      form.reset();
+      document.getElementById('form-success').scrollIntoView({behavior:'smooth'});
+    })
+    .catch(function(){ /* fall back to normal Netlify form submission */ });
+});
+</script>
 
 <script>
 (function(){
